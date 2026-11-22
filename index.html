@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Unit 3 · On schedule | Interactive review</title>
+<style>
+:root{font:17px/1.55 system-ui,sans-serif;color:#152b38;background:#edf4f5}
+*{box-sizing:border-box} body{margin:0} main,.hero{max-width:920px;margin:auto;padding:24px}
+header{background:#123b4e;color:#fff} h1{font-size:clamp(2rem,6vw,3.2rem);margin:0} h2{line-height:1.2}
+p{margin:.55rem 0 1rem} nav{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 20px}
+button{font:inherit;cursor:pointer;border:1px solid #527987;border-radius:8px;padding:7px 12px;background:white;color:#153746}
+button[aria-current="true"]{color:white;background:#176363;border-color:#176363}
+button:focus-visible,input:focus-visible,summary:focus-visible{outline:3px solid #aa4c00;outline-offset:3px}
+section,details{background:white;padding:clamp(12px,3vw,24px);border:1px solid #c4d5da;border-radius:14px}
+details{margin-bottom:12px} summary{cursor:pointer;font-weight:750} .table-wrap{overflow:auto}
+table{width:100%;border-collapse:collapse;margin:12px 0} th,td{padding:9px 10px;text-align:left;vertical-align:top;border:1px solid #c4d5da} th{background:#eef7fa}
+#toolbar{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:20px 0 12px} #score{margin:0;font-weight:700}
+.transcript{background:#f2f8f8}.transcript p{margin:.55rem 0}.transcript h3{margin:1rem 0 .4rem}.context{background:#e7f5f3;border-left:4px solid #287e78;padding:12px 14px} fieldset{margin:18px 0;padding:12px;border:1px solid #c4d5da;border-radius:10px;min-width:0}
+legend{font-weight:700;padding:0 5px} label{display:flex;gap:10px;padding:8px 10px;margin:4px 0;border-radius:6px;background:#f1f5f7;cursor:pointer;align-items:baseline}
+label:has(input:checked){box-shadow:inset 0 0 0 2px #527987} input{accent-color:#176363} .feedback{margin:8px 0 0}
+.good{color:#0c6336} .retry{color:#9d3022} .footer-actions{display:flex;justify-content:space-between;gap:8px}
+</style>
+</head>
+<body>
+<header><div class="hero"><div>Business English · Unit 3</div><h1>On schedule</h1><p>Choose one answer per question. Read the feedback and try again.</p></div></header>
+<main>
+<details open>
+<summary>Grammar reference · Present perfect vs past simple</summary>
+<div class="table-wrap" tabindex="0" aria-label="Grammar comparison">
+<table><thead><tr><th scope="col">Form and use</th><th scope="col">Present perfect</th><th scope="col">Past simple</th></tr></thead><tbody>
+<tr><th scope="row">Form</th><td>have / has + past participle<br>We <b>have sent</b> it.</td><td>Past form<br>We <b>sent</b> it.</td></tr>
+<tr><th scope="row">Negatives and questions</th><td>We <b>haven’t sent</b> it yet.<br><b>Have</b> you <b>sent</b> it yet?</td><td>We <b>didn’t send</b> it yesterday.<br>When <b>did</b> you <b>send</b> it?</td></tr>
+<tr><th scope="row">When to use it</th><td>Give a current result, check progress during an unfinished period, or describe a state continuing up to now.<br>We <b>have received</b> two replies so far.<br>We <b>have known</b> her since May.</td><td>Report a finished past action or ask when it happened.<br>We <b>received</b> two replies yesterday.</td></tr>
+<tr><th scope="row">Time expressions</th><td>so far, up to now, since May, over the last few months<br>We’ve <b>already</b> booked it. We’ve <b>just</b> booked it. We haven’t paid <b>yet</b>.</td><td>yesterday, last week, two weeks ago, at 8 a.m.<br>We <b>booked</b> it two weeks ago.</td></tr>
+<tr><th scope="row">This morning</th><td>At 10 a.m., reviewing progress so far: “We’ve had two replies this morning.”</td><td>At 4 p.m., looking back at the morning: “We had two replies this morning.”</td></tr>
+<tr><th scope="row">Passive updates</th><td>The date <b>has been set</b>.</td><td>The date <b>was set</b> yesterday.</td></tr>
+</tbody></table></div>
+</details>
+<details>
+<summary>How to suggest, respond and ask for an update</summary>
+<div class="table-wrap" tabindex="0" aria-label="Meeting language">
+<table><thead><tr><th scope="col">Purpose</th><th scope="col">Language</th></tr></thead><tbody>
+<tr><th scope="row">Suggest an action</th><td><b>How about + -ing?</b> How about asking the technicians?<br><b>Why don’t we / We could / We should + base verb</b> · Why don’t we review the schedule?<br><b>-ing phrase + would be my proposal</b> · Using a different phone would be my proposal.</td></tr>
+<tr><th scope="row">Respond</th><td>That’s a good idea. / It’s worth a try. / That’s possible, but … / I’m not convinced.</td></tr>
+<tr><th scope="row">Ask for an update</th><td>How’s the campaign coming along? / How far are you with the packaging? / What’s the current status?</td></tr>
+<tr><th scope="row">Give an update</th><td>We’re on track. / We’ve hit a problem with the battery. / I haven’t made a final choice yet.</td></tr>
+<tr><th scope="row">Clarify or question</th><td>So what you’re saying is …? / I take your point, but is that really the case?</td></tr>
+</tbody></table></div>
+</details>
+<div id="toolbar"><p id="score" aria-live="polite"></p><button id="reset" type="button">Reset this section</button></div>
+<nav id="nav" aria-label="Practice sections"></nav>
+<section id="quiz" aria-labelledby="section-title"></section>
+</main>
+<script>
+const sections = [{"title": "3.1 · Running an update meeting", "context": "", "questions": [["Why has the launch date been set for 15 November?", "To capture the Christmas trade", "To give the engineers six extra weeks", "To wait for a new battery supplier", "Michelle says the November launch is meant to capture the Christmas trade."], ["Why has the marketing team planned in extra time?", "Printing might take longer than expected.", "The venue still needs to be booked.", "The launch date hasn’t been set yet.", "Michelle says the extra time is for possible printing delays."], ["He ___ the venue two weeks ago.", "booked", "has booked", "has been booked", "Two weeks ago names a finished past time."], ["I ___ offers from various catering companies.", "’ve already received", "already receiving", "’ve already receive", "Michelle reports progress up to now. Use have + already + past participle."], ["I ___ a final choice yet.", "haven’t made", "didn’t made", "haven’t make", "The decision is still pending. Use haven’t + past participle."], ["When can the battery run out in six hours?", "When its key features are in permanent use", "Whenever the phone is switched on", "Only when the phone is charging", "Ian says six hours is an extreme case linked to continuous use of key features."], ["What did the engineers find?", "A basic design problem with the battery", "A delay in the advertising campaign", "A problem with the phone’s screen", "Ian reports that the engineers have identified a battery design problem."], ["What does Sarah say to ask about the advertising campaign?", "How’s the advertising campaign coming along?", "How far are you with preparations for the launch party?", "So what do you mean exactly?", "How’s … coming along? asks how something is progressing."], ["What does Sarah say to clarify Ian’s first update about the battery?", "So what do you mean exactly?", "How are things with the marketing department?", "Are there any alternatives?", "Sarah uses this question to ask Ian to explain the battery issue."]], "transcript": [["Sarah", "… OK, I sent you a proposed agenda yesterday. Have you had a chance to look at it?"], ["Ian", "Yes, it looks fine."], ["Sarah", "So, the purpose of today is to update each other on progress and consider anything that might affect our schedule."], ["Ian", "OK."], ["Sarah", "So, Michelle, why don’t you start? How are things with the marketing department?"], ["Michelle", "Up to now, the launch date has been set for the 15th of November, to capture the Christmas trade – this means we must meet our deadlines."], ["Sarah", "Good point. So how’s the advertising campaign coming along?"], ["Michelle", "That’s fine. We’ve set a realistic schedule and planned in a bit of extra time in case the printing takes longer than expected."], ["Sarah", "Great. And how far are you with preparations for the launch party?"], ["Michelle", "Our events manager says we’re on track. He booked the venue two weeks ago and I’ve already received offers from various catering companies. I haven’t made a final choice yet, but most of them are well within our budget."], ["Sarah", "That sounds good, Michelle, thanks. So, how does your side of things look, Ian?"], ["Ian", "Well, actually, things aren’t running as smoothly as I’d hoped. We’ve hit a problem with the handset battery life."], ["Sarah", "OK … so what do you mean exactly?"], ["Ian", "Well, in some cases, the battery can run out in six hours if its key features are in permanent use."], ["Michelle", "So what you’re saying is we’re about to launch a new revolutionary low cost mobile phone and its battery only lasts six hours!?"], ["Ian", "Well, obviously, that’s an extreme case, but the engineers have identified that there is a basic design problem with the battery."], ["Sarah", "So the real problem lies with the battery manufacturers?"], ["Ian", "Yes."], ["Michelle", "But, Ian, what about our deadlines? Can this problem be resolved?"], ["Ian", "Well, our engineers are looking into it and if it’s fixable, they’ll do it, but they’ll need time. We may have to reschedule."], ["Michelle", "But we can’t postpone the launch at this stage! There must be something you can do."], ["Sarah", "Are there any alternatives?"], ["Ian", "Well, I’ve got some suggestions, but you may not like them."], ["Sarah", "Ian, you’ve put us in a difficult position – why don’t we get another coffee and then we’ll look at our options?"]]}, {"title": "3.2 · Making and responding to suggestions", "context": "", "questions": [["___ finding another battery supplier?", "How about", "Why don’t we", "We could", "How about is followed by an -ing form."], ["Why does Ian object to finding another supplier?", "He doesn’t think it would help them meet their current deadlines.", "He thinks it would make the VP20 too expensive.", "He thinks they’ve already cancelled the launch.", "Ian says a new supplier wouldn’t help them meet the current deadlines."], ["We could ___ the same battery but not mention its lifespan.", "keep", "keeping", "to keep", "We could is followed by the base form."], ["What concern does Sarah raise about leaving out the battery lifespan?", "The company’s reputation is at stake.", "The caterers will cancel the booking.", "The exchange rate will change.", "Sarah is concerned about the company’s reputation."], ["Why don’t we ___ and see what the technicians suggest?", "wait", "waiting", "to wait", "Why don’t we is followed by the base form."], ["How does Michelle respond to waiting for the technicians and moving the launch date?", "That’s not an ideal solution.", "It’s worth a try.", "That’s a good idea.", "Michelle points out that moving the date means cancelling existing arrangements."], ["Using a different phone for the launch ___ my proposal.", "would be", "we could", "how about", "An -ing phrase can be the subject of would be my proposal."], ["Why isn’t Michelle convinced about using the VP20?", "The project was meant to offer a hi-tech phone at an attractive price.", "The VP20 is too expensive.", "The VP20 won’t be ready for Christmas.", "The VP20 is new and cheap, but it is less hi-tech than planned."], ["What does Sarah suggest at the end?", "Look at what they can reschedule.", "Leave out the battery lifespan.", "Go ahead with the VP20.", "Sarah says they should look at what they can reschedule."]], "transcript": [["Sarah", "The battery problem has to be resolved; otherwise the whole project is in trouble – that’s how I see it."], ["Michelle", "Is that really the case? How about finding another battery supplier?"], ["Ian", "I don’t think that would help us meet our current deadlines. We could keep the same battery but not mention its lifespan."], ["Sarah", "That’s possible, but our reputation is at stake here."], ["Michelle", "Yes, and if the project fails we have no chance of becoming market leader!"], ["Ian", "OK. Why don’t we wait and see what the technicians suggest and in the meantime move the launch date?"], ["Michelle", "That’s not an ideal solution. It means cancelling the printers, the caterers, the advertising …"], ["Sarah", "Do we have any other options?"], ["Ian", "Well, using a different phone for the launch would be my proposal. We could use the VP20: it’s new, cheap, but not as hi-tech."], ["Michelle", "I’m not convinced. The whole idea of this project was to offer a hi-tech phone and services at an attractive price."], ["Sarah", "Yes. If you ask me, we should look at what we can reschedule."], ["Michelle", "Oh, I suppose so."]]}, {"title": "3.3 · Questioning a decision", "context": "", "questions": [["What is the main topic of Conversation 1?", "Staffing", "Budget", "Schedule", "The speakers discuss whether Peter can split his time between two projects."], ["What is the main topic of Conversation 2?", "Schedule", "Staffing", "Budget", "The speakers disagree about how far behind the project is."], ["What is the main topic of Conversation 3?", "Budget", "Schedule", "Staffing", "The speakers discuss cost forecasts and exchange rates."], ["Why does B question the proposal in Conversation 1?", "B needs someone fully dedicated from now on.", "B thinks Peter has only one week left on the Lansdown contract.", "B wants to end the Lansdown contract.", "The Lansdown project still has three months left, and B needs someone full-time now."], ["How far behind does B say the project is in Conversation 2?", "About six weeks", "About one month", "Three months", "A says about a month. B reads the dates and says it’s closer to six weeks."], ["How does B open the disagreement in Conversation 3?", "Sorry, but I’m not sure I agree.", "Are you sure that’s the best way forward?", "Is that really the case?", "B softens the disagreement with Sorry and I’m not sure."], ["What factor does B point to in Conversation 3?", "Changes in the exchange rate when buying steel from China", "Overtime payments for the Lansdown team", "A delay in finding a new battery supplier", "The earlier forecasts made allowances for exchange-rate changes."]], "transcript": [["1", ""], ["A", "And I think you’ll need one more person on your team as it’s quite a big job. I think we can divide Peter’s time between his current work on the Lansdown contract and working with you. And when Lansdown finishes, he can work with you full-time."], ["B", "Are you sure that’s the best way forward? They still have another three months left on that project. To meet these deadlines I’ll need someone who is 100% dedicated from now on."], ["2", ""], ["A", "Well, we are about a month behind, but we’ve been unlucky for various reasons. I’m sure we can make up the time with a bit of overtime here and there."], ["B", "Is that really the case? According to these dates you are more like six weeks behind. And we’re already paying a lot of overtime on this project."], ["3", ""], ["A", "So you can see from these forecasts that the final costs would in fact be lower than we previously predicted."], ["B", "Sorry, but I’m not sure I agree. The previous figures allowed for changes in the exchange rate. Given that we’re buying the steel from China we need to be realistic."]]}, {"title": "Practice file · Working with words", "context": "", "questions": [["What does preparation beforehand mean?", "upfront planning", "budget constraints", "an accurate forecast", "Upfront planning is preparation before work begins."], ["Which phrase means to continue according to plan?", "stay on track", "go over budget", "miss the deadline", "You stay on track when progress matches the plan."], ["“We’ve lost time because of unforeseen delays.” Choose the equivalent.", "We’ve fallen behind schedule.", "We’ve made the launch date.", "We’ve stayed on track.", "Falling behind schedule means progressing more slowly than planned."], ["Which phrase means a detailed, reliable prediction?", "an accurate forecast", "a strict penalty clause", "a finished past action", "A forecast predicts a future outcome."], ["“They didn’t start selling the product on the agreed date.” Choose the equivalent.", "They didn’t make the launch date.", "They didn’t go over budget.", "They didn’t set up the database.", "Make the launch date means launch on time."], ["What are spending limitations called?", "budget constraints", "project schedules", "venue bookings", "Budget constraints are limits on spending."], ["“We’ll pay a penalty if we’re late for that date.” Which phrase fits?", "miss the deadline", "stay on track", "make the launch date", "Miss the deadline means finish after the required date."], ["What does go over budget mean?", "spend more than planned", "finish later than planned", "make an accurate forecast", "Going over budget means exceeding the planned spending."], ["Did you make a detailed ___ before you started?", "plan", "run", "miss", "Make a plan is the natural collocation."], ["The trains always ___ on time in this country.", "run", "make", "stay", "Trains run on time."], ["Their spending went ___ of control!", "out", "over", "behind", "The expression is out of control."], ["If you don’t want to overspend, you need a realistic ___.", "budget", "venue", "deadline", "A budget sets out how much you can spend."], ["I hope our next project runs more ___ than this one!", "smoothly", "accurate", "smooth", "Use the adverb smoothly to describe how the project runs."], ["They made a real ___ of things last time.", "mess", "plan", "cost", "Make a mess of something means do it badly."], ["We can’t afford to ___ the chance of securing the contract.", "miss", "make", "run", "Miss the chance means lose the opportunity."]]}, {"title": "Practice file · Business communication", "context": "", "questions": [["What’s the current ___ of the staff satisfaction survey?", "status", "stand", "view", "Current status asks where the work stands now."], ["On the whole, we’re ___. We’ve received replies from the questionnaires.", "on track", "in the lane", "on the route", "On track means the work is progressing according to plan."], ["The regional HR conference date ___ for next month, hasn’t it?", "has already been set", "had already set", "has already set", "Use the passive has been set. Someone set the date."], ["Yes, but we’ve ___ with IT.", "hit a problem", "knocked a problem", "come a problem", "Hit a problem means encounter a problem."], ["So the real problem ___ IT’s time management?", "lies with", "stands with", "sits with", "The problem lies with names its source."], ["How about ___ as much of the report as you can?", "preparing", "to prepare", "prepared", "Use the -ing form after how about."], ["“That’s ___, but we’ll need the survey results first.”", "possible", "possibility", "possibly", "That’s possible acknowledges an option before giving a condition."], ["So what you’re really ___ is that you can’t continue yet?", "saying", "telling", "talking", "So what you’re saying is … checks your understanding."], ["How far are you ___?", "with the new packaging", "three weeks ago", "as smoothly as I’d hoped", "How far are you with …? asks about progress."], ["Things aren’t running ___.", "as smoothly as I’d hoped", "with the new packaging", "an ideal solution", "Run smoothly describes work progressing without problems."], ["We finalized the draft ___.", "three weeks ago", "yet", "since last month", "Three weeks ago fits a finished past action."], ["So what do you ___?", "mean exactly", "convinced", "an ideal solution", "Mean exactly asks for clarification."], ["If you ask me, ___.", "we should scrap the idea", "an ideal solution", "as smoothly as I’d hoped", "If you ask me introduces an opinion or suggestion."], ["I’m not ___.", "convinced", "an ideal solution", "mean exactly", "I’m not convinced expresses doubt."], ["That’s not ___.", "an ideal solution", "mean exactly", "three weeks ago", "That’s not an ideal solution is a tactful objection."], ["Up to now, ___.", "the launch dates have been set", "the launch dates has been set", "the launch dates were set yesterday and then moved last night", "Use present perfect for a status update up to now. Dates is plural, so use have."]]}, {"title": "Practice file · Present perfect or past simple?", "context": "David is setting up a focus group. The second dialogue concerns Mr Eng’s upcoming visit.", "questions": [["I need to ask David if he ___ to set up the focus group yet.", "has decided", "have decided", "did decided", "Yet asks about a decision up to now. He takes has."], ["Don’t worry. I ___ to him about it, so he knows.", "have already spoken", "have already spoke", "already spoken", "Spoken is the past participle of speak."], ["Really? When ___ him?", "did you see", "did you saw", "have you saw", "When asks for a specific past time. Use did + base form."], ["I ___ him at 8 this morning.", "called", "have call", "has called", "At 8 identifies when the completed call happened."], ["What ___ during that call?", "did he say", "did he said", "has he say", "Use did + say to ask about the finished call."], ["He ___ up his mind yet.", "hasn’t made", "didn’t made", "hasn’t make", "The decision is still pending. Use hasn’t + made."], ["They still ___ from head office.", "haven’t arrived", "hasn’t arrived", "haven’t arrive", "They takes haven’t, followed by the past participle."], ["___ all the arrangements for Mr Eng’s visit yet?", "Have you finalized", "Have you finalize", "Did you finalized", "Use Have you + past participle to check progress so far."], ["I ___ a date already. He’s coming on the 19th.", "have fixed", "have fix", "has fixed", "The selected date is a current result. I takes have."], ["I ___ to Anna a couple of days ago.", "spoke", "have spoken", "has spoken", "A couple of days ago refers to a finished past time."], ["___ the visit to the warehouse yet?", "Have you arranged", "Have you arrange", "Did you arranged", "Use Have you + past participle with yet to ask about current status."], ["Yes, I ___ that. It’s now on the schedule.", "have just organized", "have just organize", "has just organized", "Just marks a recent action with a current result."], ["I ___ a table yesterday at The Mill.", "booked", "have booked", "have book", "Yesterday is a finished time period."], ["You ___ very efficient so far.", "have been", "was", "have be", "So far means up to now. Use have + been."], ["The contract results are being announced now. Which question fits?", "Has our bid for the contract been successful?", "Was our bid successful last week?", "When did they announce the results last week?", "Has … been successful? asks about the result as it becomes available."], ["The contract results were announced last week. Which question explicitly asks about that finished time?", "Was our bid successful last week?", "Has our bid been successful last week?", "Has our bid been successful so far?", "Last week pairs with the past simple when it identifies when the result was known."], ["It’s Wednesday and the task is still pending. Which question checks progress up to now?", "Have you spoken to the caterers this week?", "Did you speak to the caterers last week?", "Have you speak to the caterers this week?", "Present perfect works with an unfinished period when checking current progress."], ["It’s Friday at 5 p.m. and you’re treating the workweek as finished. Which question uses the past simple?", "Did you speak to the caterers this week?", "Have you spoken to the caterers this week?", "Did you spoke to the caterers this week?", "Did you speak uses the past simple to review a period you see as finished."], ["What does just mean in “I’ve just cancelled the order”?", "Very recently", "Only, with no other action", "Before the deadline", "Here just means a short time ago."], ["In “I just cancelled it. I didn’t reorder or complain,” what does just mean?", "Only", "Already", "Yet", "The second sentence clarifies that cancelling was the only action taken."]]}, {"title": "Final review · Project updates", "context": "", "questions": [["Since our last meeting, we ___ two proposals.", "have received", "received yesterday", "has received", "Since marks the start of a period that continues up to now."], ["So far this week, we ___ three suppliers.", "have contacted", "has contacted", "did contacted", "So far this week refers to an unfinished period."], ["Last week, we ___ the draft schedule.", "finalized", "have finalized", "have finalize", "Last week is finished, so use past simple."], ["It’s 10 a.m. Which sentence counts progress in the morning up to now?", "We’ve had two replies this morning.", "We’ve had two replies yesterday morning.", "We have two replies last morning.", "This morning can take present perfect when the morning is still in progress."], ["“Brief the Anvikon staff tomorrow when everyone is present.” Which update reflects the change?", "We’ve rescheduled the briefing for tomorrow.", "We briefed everyone yesterday.", "We’ve cancelled the launch.", "Rescheduled means moved to another time."], ["The PR manager’s speech is still missing. Which update fits?", "We haven’t received it yet.", "We received it two days ago.", "We’ve already sent it to the press.", "Haven’t received it yet says the task is still pending."], ["Ian has already sent the merchandise. What might he suggest about the extra stock?", "How about leaving the extras in the car?", "How about leave the extras in the car?", "Why don’t we leaving the extras in the car?", "Leaving is the -ing form required after how about."]]}];
+const quiz = document.querySelector('#quiz');
+const nav = document.querySelector('#nav');
+const score = document.querySelector('#score');
+const total = sections.reduce((sum, section) => sum + section.questions.length, 0);
+let current = 0;
+const answers = sections.map(() => new Map());
+const positions = sections.map(section => {
+  const slots = section.questions.map((_, i) => i % 3);
+  for (let i = slots.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [slots[i], slots[j]] = [slots[j], slots[i]];
+  }
+  return slots;
+});
+function element(tag, text, parent) {
+  const node = document.createElement(tag);
+  node.textContent = text;
+  parent.append(node);
+  return node;
+}
+function updateScore() {
+  let correct = 0;
+  let answered = 0;
+  answers.forEach(section => section.forEach(value => {
+    answered++;
+    if (value) correct++;
+  }));
+  score.textContent = correct + ' correct · ' + answered + ' answered / ' + total;
+}
+function render(index, focus = false) {
+  current = index;
+  Array.from(nav.children).forEach((button, i) => {
+    button.setAttribute('aria-current', i === index ? 'true' : 'false');
+  });
+  quiz.replaceChildren();
+  const section = sections[index];
+  const title = element('h2', section.title, quiz);
+  title.id = 'section-title';
+  title.tabIndex = -1;
+  if (section.context) element('p', section.context, quiz).className = 'context';
+  if (section.transcript) {
+    element('p', 'Read the transcript, then choose the best answer.', quiz);
+    const transcript = element('details', '', quiz);
+    transcript.className = 'transcript';
+    transcript.open = true;
+    element('summary', 'Read the transcript', transcript);
+    section.transcript.forEach(([speaker, line]) => {
+      if (!line) {
+        element('h3', 'Conversation ' + speaker, transcript);
+        return;
+      }
+      const turn = element('p', '', transcript);
+      element('strong', speaker + ' ', turn);
+      turn.append(document.createTextNode(line));
+    });
+  }
+  section.questions.forEach(([prompt, correct, wrong1, wrong2, explanation], i) => {
+    const block = element('fieldset', '', quiz);
+    element('legend', (i + 1) + '. ' + prompt, block);
+    const choices = [wrong1, wrong2];
+    choices.splice(positions[index][i], 0, correct);
+    const inputs = choices.map(choice => {
+      const label = element('label', '', block);
+      const input = element('input', '', label);
+      input.type = 'radio';
+      input.name = 'q-' + index + '-' + i;
+      input.value = choice;
+      element('span', choice, label);
+      return input;
+    });
+    const feedback = element('p', '', block);
+    feedback.className = 'feedback';
+    feedback.setAttribute('role', 'status');
+    function show(choice) {
+      const ok = choice === correct;
+      feedback.className = 'feedback ' + (ok ? 'good' : 'retry');
+      feedback.textContent = (ok ? 'Correct. ' : 'Not quite. Try again. ') + explanation;
+    }
+    inputs.forEach(input => input.addEventListener('change', () => {
+      selected[index].set(i, input.value);
+      answers[index].set(i, input.value === correct);
+      show(input.value);
+      updateScore();
+    }));
+    const saved = selected[index].get(i);
+    if (saved !== undefined) {
+      inputs.find(input => input.value === saved).checked = true;
+      show(saved);
+    }
+  });
+  const controls = element('div', '', quiz);
+  controls.className = 'footer-actions';
+  if (index > 0) addButton('Previous section', controls, () => render(index - 1, true));
+  if (index + 1 < sections.length) addButton('Next section', controls, () => render(index + 1, true));
+  if (focus) title.focus();
+}
+function addButton(label, parent, action) {
+  const button = element('button', label, parent);
+  button.type = 'button';
+  button.addEventListener('click', action);
+}
+const selected = sections.map(() => new Map());
+const labels = ['Read 3.1', 'Read 3.2', 'Read 3.3', 'Vocabulary', 'Communication', 'Grammar', 'Final review'];
+labels.forEach((label, index) => addButton(label, nav, () => render(index)));
+document.querySelector('#reset').addEventListener('click', () => {
+  answers[current].clear();
+  selected[current].clear();
+  render(current);
+  updateScore();
+});
+render(0);
+updateScore();
+</script>
+</body>
+</html>
